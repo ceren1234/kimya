@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>minimal blog website</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">AHMET AÇIKGÖZ</a>
+            <div class="menuToggle"></div>
+        </header>
+<ul class="navigation">
+        <li><a href="#home" onclick="toggleMenu()">Anasayfa</a></li>
+        <li><a href="#about" onclick="toggleMenu()">Hakkmda</a></li>
+        <li><a href="#post" onclick="toggleMenu()">Galeri</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">İletişim</a></li>
+
+</ul>
+<!--banner-->
+<section class="banner" id="home">
+    <img src="25.jpg" class="cover">
+    <div class="contentBx">
+        <h2>KİMYA ÖĞRETMENİ</h2>
+        <h4>AHMET AÇIKGÖZ </h4>
+        <a href="#about" class="btn">HAKKIMDA</a>
+    </div>
+</section>
+
+<!--about-->
+<section class="about" id="about">
+    <div class="title">
+        <h2>HAKKIMDA</h2>
+    </div>
+    <div class="contentBx">
+        <div class="content">
+            <p>Lorem ipsum dolor sit em ipsum dolor sit amet consectetur adipisicing elit. Laudantium dolores nostrum explicabo amet odit quos placeat accusantium esse ullam rerum! Facilis excepturi ipsum minima adipisci pariatur voluptate voluptatem laboriosam placeat? 
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, velit expedita, animi quaerat perferendis, ea voluptatem tempore inventore saepe soluta aspernatur aut reprehenderit 
+            sunt architecto doloribus veritatis dolorum pariatur optio. <br><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi autem, laborum accusamus expedita id ratione eligendi placeat libero ipsum saepe ipsam, minus unde odit, quam cumque magni reiciendis. Necessitatibus, corporis?  
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. m ipsum dolor, s doloribus Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita fugit tempora porro autem voluptatem at sed voluptate beatae suscipit? Suscipit incidunt unde dolorum, sequi officiis labore nisi minus vero at? </p>
+        </div>
+        <div class="content">
+            <div class="imgBx"></div>
+      <img src="111.jpg" class="cover">
+        </div>
+    </div>
+</section>
+
+<!--latest blog post-->
+<section id="egitimler">
+    <div class="container">
+        <h2>EĞİTİMLER</h2>
+        <div>
+            <div class="card">
+                <img src="13.png" alt="" class="img-fluid">
+                <h5 class="baslikcard">Özel Ders</h5>
+                <p class="cardp">Lorem ipsum dolor sit amet consectetur adipisicing elit. At illum reiciendis reprehenderit molestias possimus esse quia. Quo architecto voluptatem doloribus ea eum atque iusto nihil tenetur pariatur, quasi corrupti cumque.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    
+
+
+<!--contact-->
+<section class="contact" id="contact">
+    <div class="title">
+        <h2>iletişim</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime provident veniam facilis vitae odio quasi officiis cupiditate quis, nihil, vero voluptates omnis! Dolores aliquam molestiae nostrum architecto sit mollitia reprehenderit!</p>
+    </div>
+    <div class="contactForm">
+        <div class="row">
+            <input type="text" name="" placeholder="ad">
+            <input type="text" name="" placeholder="soyad">
+        </div>
+        
+        <div class="row">
+            <input type="text" name="" placeholder="email">
+            <input type="text" name="" placeholder="telefon no">
+
+        </div>
+        <div class="row2">
+            <textarea placeholder="mesaj"></textarea>
+        </div>
+        <div class="row2">
+          <input type="submit" value="gönder" class="btn">
+        </div>
+    </div>
+</section>
+
+<!--footer-->
+<footer>
+    <a href="#" class="logo">Ahmet Açıkgöz</a>
+    <ul class="footerMenu">
+        <li><a href="#home">Anasayfa</a></li>
+        <li><a href="#about">Hakkımda</a></li>
+        <li><a href="#post">Galeri</a></li>
+        <li><a href="#contact">İletişim</a></li>
+      </ul> 
+       <p class="copyrightText"> Copyright © 2021. Tüm hakları saklıdır.</p>
+    
+</footer>
+        <script>
+            const menuToggle = document.querySelector('.menuToggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.onclick = function(){
+                menuToggle.classList.toggle('active');
+                navigation.classList.toggle('active');
+            }
+            window.addEventListener('scroll', function(){
+                const header = document.querySelector('header');
+                header.classList.toggle('sticky', window.scrollY > 0);
+            })
+
+
+            //now, we will fix navigation issue.... menu close after clicked any link
+            function toggleMenu(){
+                menuToggle.classList.remove('active');
+                navigation.classList.remove('active');
+
+            }
+        </script>
+    </body>
+</html>
